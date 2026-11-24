@@ -1086,17 +1086,12 @@
 <script>
   // Simple form feedback (replace with real Salesforce submission)
   document.getElementById('enquiryForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+    
     const btn = this.querySelector('.form-submit');
     btn.textContent = 'Sending…';
     btn.disabled = true;
     btn.style.opacity = '0.7';
-    setTimeout(() => {
-      btn.textContent = '✓ Enquiry sent!';
-      btn.style.background = '#22c55e';
-      btn.style.boxShadow = '0 0 24px rgba(34,197,94,0.35)';
-    }, 1200);
-    // When live: remove e.preventDefault() and let Salesforce handle the redirect.
+    
   });
 </script>
 </body>
