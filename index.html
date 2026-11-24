@@ -933,102 +933,45 @@
 
 <!-- --------------------------------------------------------------------------------- -->
 
-      <form id="enquiryForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dg700000QpdQA" method="POST">
-        
-        <input type=hidden name="oid" value="00Dg700000QpdQA">
-        <input type=hidden name="retURL" value="https://niraj6295.github.io/MOBI/#enquire">
-        <!-- Fixed Value for lead_source -->
-        <input type="hidden" id="lead_source" name="lead_source" value="Web" />
+      <!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <div class="form-row">
-          <div class="form-field">
-            <label for="first_name">First name</label>
-            <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
-          </div>
-          <div class="form-field">
-            <label for="last_name">Last Name</label>
-            <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
-          </div>
-        </div>
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input  id="email" maxlength="80" name="email" size="20" type="text" />
-        </div>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <div class="form-row">
-          <div class="form-field">
-            <label for="phone">Phone Number</label>
-            <input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
-          </div>
-          <div class="form-field">
-            <label for="company">Company</label >
-            <input  id="company" maxlength="40" name="company" size="20" type="text" required/>
-          </div>  
-        </div>
-        <div class="form-row">
-          <div class="form-field">Expected Quantity:
-            <input  id="00Ng700001Vw2rv" name="00Ng700001Vw2rv" size="20" type="text" />
-          </div>
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dg700000QpdQA" method="POST">
 
-          <div class="form-field">Expected Budget:
-            <input  id="00Ng700001VjAsA" name="00Ng700001VjAsA" size="20" type="text" />
-          </div>
-        </div>
-        
-        <div class="form-field">Customer Type:
-          <select  id="00Ng700001Vvycz" name="00Ng700001Vvycz" title="Customer Type">
-            <option value="">--None--</option>
-            <option value="Distributor">Distributor</option>
-            <option value="Retailer">Retailer</option>
-            <option value="Corporate Buyer">Corporate Buyer</option>
-            <option value="Individual Customer">Individual Customer</option>
-          </select>
-        </div>
-        <div class="form-field">Product Category:
-          <select  id="00Ng700001Vw1Kj" name="00Ng700001Vw1Kj" title="Product Category">
-            <option value="">--None--</option>
-            <option value="Mobile">Mobile</option>
-            <option value="Laptop">Laptop</option>
-            <option value="Smart Watch">Smart Watch</option>
-            <option value="Others">Others</option>
-          </select>
-        </div>
+<input type=hidden name="oid" value="00Dg700000QpdQA">
+<input type=hidden name="retURL" value="http://">
 
-        <div class="form-field">Product of Interest:
-          <select  id="00Ng700001Vw3BF" multiple="multiple" name="00Ng700001Vw3BF" title="Product of Interest">
-            <option value="Product 1">Product 1</option>
-            <option value="Product 2">Product 2</option>
-            <option value="Product 3">Product 3</option>
-            <option value="Product 4">Product 4</option>
-            <option value="Product 5">Product 5</option>
-          </select><br>
-          
-        </div>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="nirajksingh@dccglobal.in">                                       -->
+<!--  ----------------------------------------------------------------------  -->
 
-        <div class="form-field">Purchase Timeline:
-          <select  id="00Ng700001Vw16o" name="00Ng700001Vw16o" title="Purchase Timeline">
-            <option value="">--None--</option>
-            <option value="Immediately">Immediately</option>
-            <option value="Within 15 Days">Within 15 Days</option>
-            <option value="Within 30 Days">Within 30 Days</option>
-            <option value="Within 3 Months">Within 3 Months</option>
-            <option value="Just Exploring">Just Exploring</option>
-          </select>
-        </div>
+<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
 
-        <div class="form-field">Enquiry Location:
-          <input  id="00Ng700001VvxIs" maxlength="100" name="00Ng700001VvxIs" size="20" type="text" />
-        </div>
-        
-        <div class="form-field">
-          <label for="description">Description</label>
-          <textarea name="description"></textarea><br>
-        </div>
+<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
 
-        <button name="submit" type="submit" class="form-submit">Send Enquiry</button>
-        <p class="form-privacy">Your details are used only to respond to your enquiry. We never share your information with third parties.</p>
-      </form>
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
+
+<input type="hidden"  id="lead_source" name="lead_source" value="Web" /><br>
+
+<input type="submit" name="submit">
+
+</form>
+
 <!-- --------------------------------------------------------------------------------- -->
 
     </div>
