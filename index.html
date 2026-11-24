@@ -930,59 +930,107 @@
       <h3>Product Enquiry</h3>
       <p class="form-hint">We'll respond within 24 hours with pricing and availability.</p>
 
-      <form id="enquiryForm" action="#" method="POST">
-        <!-- Salesforce hidden fields (uncomment and fill when going live) -->
-        <!-- <input type="hidden" name="oid" value="YOUR_SALESFORCE_ORG_ID"> -->
-        <!-- <input type="hidden" name="retURL" value="https://your-site.com/thank-you"> -->
+
+<!-- --------------------------------------------------------------------------------- -->
+
+      <form id="enquiryForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dg700000QpdQA" method="POST">
+        
+        <input type=hidden name="oid" value="00Dg700000QpdQA">
+        <input type=hidden name="retURL" value="https://niraj6295.github.io/MOBI/#enquire">
+        <!-- Fixed Value for lead_source -->
+        <input type="hidden" id="lead_source" name="lead_source" value="Web" />
 
         <div class="form-row">
           <div class="form-field">
             <label for="first_name">First name</label>
-            <input type="text" id="first_name" name="first_name" placeholder="Ravi" required>
+            <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
           </div>
           <div class="form-field">
-            <label for="last_name">Last name</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Sharma" required>
+            <label for="last_name">Last Name</label>
+            <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" />
           </div>
         </div>
 
         <div class="form-field">
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="ravi@company.com" required>
+          <label for="email">Email</label>
+          <input  id="email" maxlength="80" name="email" size="20" type="text" />
         </div>
 
         <div class="form-row">
           <div class="form-field">
-            <label for="phone">Phone number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000">
+            <label for="phone">Phone Number</label>
+            <input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
           </div>
           <div class="form-field">
-            <label for="company">Company / Organisation</label>
-            <input type="text" id="company" name="company" placeholder="Your company name">
+            <label for="company">Company</label>
+            <input  id="company" maxlength="40" name="company" size="20" type="text" />
+          </div>  
+        </div>
+        <div class="form-row">
+          <div class="form-field">Expected Quantity:
+            <input  id="00Ng700001Vw2rv" name="00Ng700001Vw2rv" size="20" type="text" />
+          </div>
+
+          <div class="form-field">Expected Budget:
+            <input  id="00Ng700001VjAsA" name="00Ng700001VjAsA" size="20" type="text" />
           </div>
         </div>
-
-        <div class="form-field">
-          <label for="lead_source">I'm interested in</label>
-          <select id="lead_source" name="lead_source">
-            <option value="" disabled selected>Select a product category</option>
-            <option value="Smartphones">Smartphones</option>
-            <option value="Tablets">Tablets</option>
-            <option value="Audio & Wearables">Audio &amp; Wearables</option>
-            <option value="Accessories">Accessories</option>
-            <option value="Bulk / Corporate Order">Bulk / Corporate Order</option>
-            <option value="Other">Other</option>
+        
+        <div class="form-field">Customer Type:
+          <select  id="00Ng700001Vvycz" name="00Ng700001Vvycz" title="Customer Type">
+            <option value="">--None--</option>
+            <option value="Distributor">Distributor</option>
+            <option value="Retailer">Retailer</option>
+            <option value="Corporate Buyer">Corporate Buyer</option>
+            <option value="Individual Customer">Individual Customer</option>
+          </select>
+        </div>
+        <div class="form-field">Product Category:
+          <select  id="00Ng700001Vw1Kj" name="00Ng700001Vw1Kj" title="Product Category">
+            <option value="">--None--</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Smart Watch">Smart Watch</option>
+            <option value="Others">Others</option>
           </select>
         </div>
 
-        <div class="form-field">
-          <label for="description">Tell us more</label>
-          <textarea id="description" name="description" placeholder="Which models are you considering? Quantity, budget, timeline — any details help us serve you faster."></textarea>
+        <div class="form-field">Product of Interest:
+          <select  id="00Ng700001Vw3BF" multiple="multiple" name="00Ng700001Vw3BF" title="Product of Interest">
+            <option value="Product 1">Product 1</option>
+            <option value="Product 2">Product 2</option>
+            <option value="Product 3">Product 3</option>
+            <option value="Product 4">Product 4</option>
+            <option value="Product 5">Product 5</option>
+          </select><br>
+          
         </div>
 
-        <button type="submit" class="form-submit">Send Enquiry</button>
+        <div class="form-field">Purchase Timeline:
+          <select  id="00Ng700001Vw16o" name="00Ng700001Vw16o" title="Purchase Timeline">
+            <option value="">--None--</option>
+            <option value="Immediately">Immediately</option>
+            <option value="Within 15 Days">Within 15 Days</option>
+            <option value="Within 30 Days">Within 30 Days</option>
+            <option value="Within 3 Months">Within 3 Months</option>
+            <option value="Just Exploring">Just Exploring</option>
+          </select>
+        </div>
+
+        <div class="form-field">Enquiry Location:
+          <input  id="00Ng700001VvxIs" maxlength="100" name="00Ng700001VvxIs" size="20" type="text" />
+        </div>
+        
+        <div class="form-field">
+          <label for="description">Description</label>
+          <textarea name="description"></textarea><br>
+        </div>
+
+        <button name="submit" type="submit" class="form-submit">Send Enquiry</button>
         <p class="form-privacy">Your details are used only to respond to your enquiry. We never share your information with third parties.</p>
       </form>
+<!-- --------------------------------------------------------------------------------- -->
+
     </div>
   </div>
 </section>
